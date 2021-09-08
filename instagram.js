@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+require('dotenv').config()
 
 (async () => {
     try{
@@ -7,7 +8,7 @@ const puppeteer = require('puppeteer');
         await page.goto('https://instagram.com')
         await page.waitForSelector('#loginForm > div > div:nth-child(1) > div > label > input')
         await page.type('#loginForm > div > div:nth-child(1) > div > label > input', 'albadauto')
-        await page.type('#loginForm > div > div:nth-child(2) > div > label > input', 'albarraz2001')
+        await page.type('#loginForm > div > div:nth-child(2) > div > label > input', `${process.env.PASS}`)
         await page.click('#loginForm > div > div:nth-child(3) > button > div')
         delay(50000)
         await page.waitForSelector('#react-root > section > nav > div._8MQSO.Cx7Bp > div > div > div.LWmhU._0aCwM > input')
