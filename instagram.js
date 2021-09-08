@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-require('dotenv').config()
+require('dotenv').config();
 
 (async () => {
     try{
