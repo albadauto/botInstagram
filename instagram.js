@@ -12,7 +12,9 @@ require('dotenv').config();
         await page.click('#loginForm > div > div:nth-child(3) > button > div')
         delay(50000)
         await page.waitForSelector('#react-root > section > nav > div._8MQSO.Cx7Bp > div > div > div.LWmhU._0aCwM > input')
-        await page.type('#react-root > section > nav > div._8MQSO.Cx7Bp > div > div > div.LWmhU._0aCwM > input', 'deathanyart')
+        await page.type('#react-root > section > nav > div._8MQSO.Cx7Bp > div > div > div.LWmhU._0aCwM > input', 'Mateus Albarraz')
+        await page.waitForSelector('#react-root > section > nav > div._8MQSO.Cx7Bp > div > div > div.LWmhU._0aCwM > div.yPP5B > div > div._01UL2 > div > div.JvDyy > a > div')
+        await page.click('#react-root > section > nav > div._8MQSO.Cx7Bp > div > div > div.LWmhU._0aCwM > div.yPP5B > div > div._01UL2 > div > div.JvDyy > a > div')
     }catch(e){
         console.log(e)
     }
